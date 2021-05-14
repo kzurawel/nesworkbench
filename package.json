@@ -1,0 +1,24 @@
+{
+  "name": "nesworkbench",
+  "version": "0.1.0",
+  "description": "Graphics tools for NES development",
+  "main": "index.js",
+  "scripts": {
+    "tauri": "tauri",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kzurawel/nesworkbench.git"
+  },
+  "author": "Kevin Zurawel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kzurawel/nesworkbench/issues"
+  },
+  "homepage": "https://github.com/kzurawel/nesworkbench#readme",
+  "dependencies": {
+    "@tauri-apps/api": "*",
+    "@tauri-apps/cli": "*"
+  }
+}
