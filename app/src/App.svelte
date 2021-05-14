@@ -1,16 +1,19 @@
 <script>
   import Toolbar from './components/Toolbar.svelte';
+  import Statusbar from './components/Statusbar.svelte';
 </script>
 
 <main>
   <Toolbar/>
+  <Statusbar/>
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+  :global(body) {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+  }
 </style>
