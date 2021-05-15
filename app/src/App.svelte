@@ -1,14 +1,14 @@
 <script>
-  import Toolbar from './components/Toolbar.svelte';
-  import Statusbar from './components/Statusbar.svelte';
+  import Toolbar from "./components/Toolbar.svelte";
+  import Statusbar from "./components/Statusbar.svelte";
 
-  import { listen, emit } from '@tauri-apps/api/event';
-  import { onMount, onDestroy } from 'svelte';
+  import { listen } from "@tauri-apps/api/event";
+  import { onMount, onDestroy } from "svelte";
 
   let unlisten;
 
   onMount(async () => {
-    unlisten = await listen('rust-event', handleRustEvents);
+    unlisten = await listen("rust-event", handleRustEvents);
   });
 
   onDestroy(() => {
@@ -23,8 +23,8 @@
 </script>
 
 <main>
-  <Toolbar/>
-  <Statusbar/>
+  <Toolbar />
+  <Statusbar />
 </main>
 
 <style>
