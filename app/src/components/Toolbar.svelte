@@ -15,7 +15,7 @@
     flex-direction: row;
     align-items: flex-start;
     height: 2em;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
