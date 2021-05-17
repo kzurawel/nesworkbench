@@ -1,15 +1,15 @@
 <script>
-  import Toolbar from "./components/Toolbar.svelte";
-  import Statusbar from "./components/Statusbar.svelte";
-  import ProjectTree from "./components/projecttree/ProjectTree.svelte";
+  import Toolbar from './components/Toolbar.svelte';
+  import Statusbar from './components/Statusbar.svelte';
+  import ProjectTree from './components/projecttree/ProjectTree.svelte';
 
-  import { listen } from "@tauri-apps/api/event";
-  import { onMount, onDestroy } from "svelte";
+  import { listen } from '@tauri-apps/api/event';
+  import { onMount, onDestroy } from 'svelte';
 
   let unlisten;
 
   onMount(async () => {
-    unlisten = await listen("rust-event", handleRustEvents);
+    unlisten = await listen('rust-event', handleRustEvents);
   });
 
   onDestroy(() => {

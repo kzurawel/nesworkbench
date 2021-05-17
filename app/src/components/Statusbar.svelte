@@ -1,5 +1,5 @@
 <script>
-  export let status = "Welcome to NES Workbench";
+  export let status = 'Welcome to NES Workbench';
 </script>
 
 <div class="statusbar">

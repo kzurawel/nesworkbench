@@ -1,6 +1,6 @@
 <script>
-  import NewProject from "./toolbar/NewProject.svelte";
-  import OpenProject from "./toolbar/OpenProject.svelte";
+  import NewProject from './toolbar/NewProject.svelte';
+  import OpenProject from './toolbar/OpenProject.svelte';
 </script>
 
 <div>

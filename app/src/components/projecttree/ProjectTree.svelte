@@ -1,51 +1,51 @@
 <script>
   let defaultTree = {
-    name: "Project",
+    name: 'Project',
     children: [
       {
-        name: "Colors",
+        name: 'Colors',
         children: [
           {
-            name: "Palettes",
-            children: [],
+            name: 'Palettes',
+            children: []
           },
           {
-            name: "Palette Sets",
-            children: [],
-          },
-        ],
+            name: 'Palette Sets',
+            children: []
+          }
+        ]
       },
       {
-        name: "Tiles",
+        name: 'Tiles',
         children: [
           {
-            name: "Tile Sets",
-            children: [],
+            name: 'Tile Sets',
+            children: []
           },
           {
-            name: "Pattern Tables",
-            children: [],
-          },
-        ],
+            name: 'Pattern Tables',
+            children: []
+          }
+        ]
       },
       {
-        name: "Screens",
+        name: 'Screens',
         children: [
           {
-            name: "Metatiles",
-            children: [],
+            name: 'Metatiles',
+            children: []
           },
           {
-            name: "Backgrounds",
-            children: [],
+            name: 'Backgrounds',
+            children: []
           },
           {
-            name: "Scenes",
-            children: [],
-          },
-        ],
-      },
-    ],
+            name: 'Scenes',
+            children: []
+          }
+        ]
+      }
+    ]
   };
   export let tree = defaultTree;
   const { name, children } = tree;
