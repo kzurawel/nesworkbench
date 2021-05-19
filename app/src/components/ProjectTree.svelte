@@ -6,21 +6,7 @@
   import GridIcon from '@svicons/boxicons-regular/grid.svelte';
   import ImageIcon from '@svicons/boxicons-regular/image.svelte';
 
-  export let colorItems = {
-    palettes: [],
-    paletteSets: []
-  };
-
-  export let tileItems = {
-    tileSets: [],
-    patternTables: []
-  };
-
-  export let screenItems = {
-    metatiles: [],
-    backgrounds: [],
-    scenes: []
-  };
+  import { colorItems, tileItems, screenItems } from '../stores';
 </script>
 
 <div class="projecttree">
@@ -30,9 +16,9 @@
       <Tree>
         <TreeNode>
           <svelte:fragment slot="display">Palettes</svelte:fragment>
-          {#if colorItems.palettes.length}
+          {#if $colorItems.palettes.length}
             <Tree>
-              {#each colorItems.palettes as palette}
+              {#each $colorItems.palettes as palette}
                 <TreeNode>
                   <svelte:fragment slot="display">{palette.name}</svelte:fragment>
                 </TreeNode>
@@ -42,9 +28,9 @@
         </TreeNode>
         <TreeNode>
           <svelte:fragment slot="display">Palette Sets</svelte:fragment>
-          {#if colorItems.paletteSets.length}
+          {#if $colorItems.paletteSets.length}
             <Tree>
-              {#each colorItems.paletteSets as paletteSet}
+              {#each $colorItems.paletteSets as paletteSet}
                 <TreeNode>
                   <svelte:fragment slot="display">{paletteSet.name}</svelte:fragment>
                 </TreeNode>
@@ -59,9 +45,9 @@
       <Tree>
         <TreeNode>
           <svelte:fragment slot="display">Tile Sets</svelte:fragment>
-          {#if tileItems.tileSets.length}
+          {#if $tileItems.tileSets.length}
             <Tree>
-              {#each tileItems.tileSets as tileSet}
+              {#each $tileItems.tileSets as tileSet}
                 <TreeNode>
                   <svelte:fragment slot="display">{tileSet.name}</svelte:fragment>
                 </TreeNode>
@@ -71,9 +57,9 @@
         </TreeNode>
         <TreeNode>
           <svelte:fragment slot="display">Pattern Tables</svelte:fragment>
-          {#if tileItems.patternTables.length}
+          {#if $tileItems.patternTables.length}
             <Tree>
-              {#each tileItems.patternTables as patternTable}
+              {#each $tileItems.patternTables as patternTable}
                 <TreeNode>
                   <svelte:fragment slot="display">{patternTable.name}</svelte:fragment>
                 </TreeNode>
@@ -88,9 +74,9 @@
       <Tree>
         <TreeNode>
           <svelte:fragment slot="display">Metatiles</svelte:fragment>
-          {#if screenItems.metatiles.length}
+          {#if $screenItems.metatiles.length}
             <Tree>
-              {#each screenItems.metatiles as metatile}
+              {#each $screenItems.metatiles as metatile}
                 <TreeNode>
                   <svelte:fragment slot="display">{metatile.name}</svelte:fragment>
                 </TreeNode>
@@ -100,9 +86,9 @@
         </TreeNode>
         <TreeNode>
           <svelte:fragment slot="display">Backgrounds</svelte:fragment>
-          {#if screenItems.backgrounds.length}
+          {#if $screenItems.backgrounds.length}
             <Tree>
-              {#each screenItems.backgrounds as background}
+              {#each $screenItems.backgrounds as background}
                 <TreeNode>
                   <svelte:fragment slot="display">{background.name}</svelte:fragment>
                 </TreeNode>
@@ -112,9 +98,9 @@
         </TreeNode>
         <TreeNode>
           <svelte:fragment slot="display">Scenes</svelte:fragment>
-          {#if screenItems.scenes.length}
+          {#if $screenItems.scenes.length}
             <Tree>
-              {#each screenItems.scenes as scene}
+              {#each $screenItems.scenes as scene}
                 <TreeNode>
                   <svelte:fragment slot="display">{scene.name}</svelte:fragment>
                 </TreeNode>
