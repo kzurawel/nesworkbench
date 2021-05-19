@@ -1,11 +1,12 @@
 <script>
-  export let icon;
-  export let parent;
+  export let icon = false;
+  export let parent = false;
+  $: hasIcon = icon != false;
 </script>
 
 <div class="treenode">
-  {#if icon}
-    <span class="icon"><slot name="icon" /></span>
+  {#if hasIcon}
+    <span class="icon"><svelte:component this={icon} /></span>
   {/if}
   <span class="display" class:parent><slot name="display" /></span>
   <slot />
